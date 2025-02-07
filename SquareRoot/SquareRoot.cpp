@@ -11,9 +11,8 @@ int SearchRoot(int num)
         n = n1;
         if (n == num)
             return i;
-        n1 = (i + 1) * (i + 1);
-        if (n < num and n1 > num)
-            return i;
+        if (i * i > num)
+            return i - 1;
     }
 
     return n; // fake one to make it compile, would never be reached
